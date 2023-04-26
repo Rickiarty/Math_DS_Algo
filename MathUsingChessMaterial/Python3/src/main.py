@@ -8,7 +8,7 @@ from datetime import datetime
 """
 
 def main():
-    print("n = ", end='')
+    print("\nn = ", end='')
     instr = input()
 
     start_time = datetime.now() # get time right after user's input 
@@ -25,8 +25,8 @@ def main():
         end_time = datetime.now() # get current time before finish 
 
         print(f" started at {start_time}")
-        print(f"finished at {end_time}")
-        print(f"       Δt(time delta) = {end_time - start_time}") # calculate Δt(time delta) inaccurately 
+        print(f"finished at {  end_time}")
+        print(f"       Δt(time delta) = {end_time - start_time}\n") # calculate Δt(time delta) inaccurately 
     else:
         print("The number 'n' must greater than 0.")
 

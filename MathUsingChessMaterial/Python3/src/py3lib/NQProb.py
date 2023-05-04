@@ -40,9 +40,9 @@ class NQueensProblem:
             else:
                 if self._isValid(x, y):
                     self._grid[y][x] = True
-                    sum += self._solQueens(y + 1)
+                    sum += self._solQueens(y = y + 1)
                     self._grid[y][x] = False
         return sum
 
     def SolveQueens(self) -> int:
-        return self._solQueens(0)
+        return self._solQueens(y=0)

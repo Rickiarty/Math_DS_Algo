@@ -29,4 +29,4 @@ DateTime end_time = DateTime.Now; // get current time before finish
 
 Console.WriteLine($" started at {start_time}");
 Console.WriteLine($"finished at {end_time}");
-Console.WriteLine($"     Δt(time delta) = {end_time - start_time}"); // calculate Δt(time delta) inaccurately 
+Console.WriteLine($"    Δt(time delta) = {end_time - start_time}"); // calculate Δt(time delta) inaccurately 

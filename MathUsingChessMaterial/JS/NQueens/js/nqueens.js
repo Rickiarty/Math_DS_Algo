@@ -64,19 +64,19 @@ function renderGridView() {
         htmlStr += "<th>" + (height - y) + "</th>";
         for (var x = 0; x < width; x += 1) {
             if (grid[y][x]) {
-                htmlStr += "<th>※</th>";
+                htmlStr += "<td>※</td>";
             } else {
                 if ((height - y) % 2 == 0) {
                     if (x % 2 == 0) {
-                        htmlStr += "<th>□</th>";
+                        htmlStr += "<td>□</td>";
                     } else {
-                        htmlStr += "<th>■</th>";
+                        htmlStr += "<td>■</td>";
                     }
                 } else {
                     if (x % 2 == 0) {
-                        htmlStr += "<th>■</th>";
+                        htmlStr += "<td>■</td>";
                     } else {
-                        htmlStr += "<th>□</th>";
+                        htmlStr += "<td>□</td>";
                     }
                 }
             }

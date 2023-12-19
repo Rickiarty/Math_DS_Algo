@@ -1,3 +1,4 @@
 Q15 ~ Q17 by:
-    CPU: 11th gen. Intel(R) Core(TM) i5-11400H @ 2.70 GHz 2.69 GHz
+    CPU: 11th gen. Intel(R) Core(TM) i5-11400H @ 2.70 GHz 2.69 GHz, x64
     memory: 16 GB RAM
+    OS: Windows 64-bit

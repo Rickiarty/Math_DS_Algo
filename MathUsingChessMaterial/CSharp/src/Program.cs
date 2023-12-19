@@ -1,4 +1,5 @@
 ﻿using NQueens;
+using System.Text;
 
 Console.Write("n = ");
 string? input = Console.ReadLine();
@@ -27,6 +28,12 @@ Console.Write($"When n = {n}, there are {numOfSol} solution(s) to Queen Problem.
 
 DateTime end_time = DateTime.Now; // get current time before finish 
 
-Console.WriteLine($" started at {start_time}");
-Console.WriteLine($"finished at {end_time}");
-Console.WriteLine($"    Δt(time delta) = {end_time - start_time}"); // calculate Δt(time delta) inaccurately 
+StringBuilder sb = new StringBuilder();
+sb.Append($" started at {start_time}\n");
+sb.Append($"finished at {end_time}\n");
+sb.Append($"    Δt(time delta) = {end_time - start_time}\n\n"); // calculate Δt(time delta) inaccurately 
+string resultStr = sb.ToString();
+Console.Write(resultStr);
+#if RELEASE
+File.AppendAllText("results.log", resultStr);
+#endif

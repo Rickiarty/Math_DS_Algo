@@ -24,11 +24,11 @@ NQueensProblem queensProblemObj = new NQueensProblem(n);
 
 Console.Write("computing ...\n\n(Press [Ctrl + C] if you want to stop execution.)\n\n");
 int numOfSol = queensProblemObj.SolveQueens();
-Console.Write($"When n = {n}, there are {numOfSol} solution(s) to Queen Problem.\n\n");
+StringBuilder sb = new StringBuilder();
+sb.Append($"When n = {n}, there are {numOfSol} solution(s) to Queen Problem.\n\n");
 
 DateTime end_time = DateTime.Now; // get current time before finish 
 
-StringBuilder sb = new StringBuilder();
 sb.Append($" started at {start_time}\n");
 sb.Append($"finished at {end_time}\n");
 sb.Append($"    Δt(time delta) = {end_time - start_time}\n\n"); // calculate Δt(time delta) inaccurately 

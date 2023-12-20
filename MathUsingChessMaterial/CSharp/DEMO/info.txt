@@ -1,4 +1,4 @@
-Q1 ~ Q19 by:
+Q1 ~ Q18 by:
     CPU: 11th gen. Intel(R) Core(TM) i5-11400H @ 2.70 GHz 2.69 GHz, x64
     memory: 16 GB RAM
     framework: .Net Core framework 7.0

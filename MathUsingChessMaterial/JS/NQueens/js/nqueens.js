@@ -37,6 +37,7 @@ function init() {
     document.getElementById("btn2").innerText = "  cancel   ";
     lock = true;
     document.getElementById("btn1").innerText = "  RUN  ";
+    document.getElementById("textarea1").value = "";
     var nStr = document.getElementById("textbox1").value;
     n = parseInt(nStr);
     width = n;
@@ -48,6 +49,22 @@ function init() {
     document.getElementById("label1").textContent = "[ status: PAUSED ]";
     console.table(grid); // print on console of web-browser 
     renderGridView(); // render on webpage 
+}
+
+function printGridStatusInTextArea() {
+    var str = "";
+    for (var y = 0; y < height; y += 1) {
+        for (var x = 0; x < width; x += 1) {
+            if (grid[y][x]) {
+                str += "Q";
+            } else {
+                str += ".";
+            }
+        }
+        str += "\n";
+    }
+    str += "------------\n";
+    document.getElementById("textarea1").value += str;
 }
 
 function renderGridView() {
@@ -125,6 +142,7 @@ async function solQueens(y) {
             renderGridView(); // render on webpage 
             if (y == height - 1) {
                 sum += 1;
+                printGridStatusInTextArea();
             }
             else {
                 sum += await solQueens(y + 1);

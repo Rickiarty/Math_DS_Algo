@@ -48,7 +48,7 @@ function init() {
     .map(() => Array(n).fill(false));
     stopped = false;
     document.getElementById("label1").textContent = "[ status: PAUSED ]";
-    console.table(grid); // print on console of web-browser 
+    //console.table(grid); // print on console of web-browser 
     renderGridView(); // render on webpage 
     startTime = new Date();
 }
@@ -76,6 +76,7 @@ function printGridStatusInTextArea() {
     var hours = delta_t % 24;
     var days = Math.floor(delta_t / 24);
     str += "------(" + days.toString() + "." + hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0") + "." + rest_part.toString().padEnd(3, "0") + ")------\n";
+    console.log(str);
     document.getElementById("textarea1").value += str;
 }
 
@@ -150,7 +151,7 @@ async function solQueens(y) {
         }
         if (isValid(x, y)) {
             grid[y][x] = true;
-            console.table(grid); // print on console of web-browser 
+            //console.table(grid); // print on console of web-browser 
             renderGridView(); // render on webpage 
             if (y == height - 1) {
                 sum += 1;
@@ -160,7 +161,7 @@ async function solQueens(y) {
                 sum += await solQueens(y + 1);
             }
             grid[y][x] = false;
-            console.table(grid); // print on console of web-browser 
+            //console.table(grid); // print on console of web-browser 
             renderGridView(); // render on webpage 
         }
     }

@@ -5,6 +5,7 @@ var n = 1;
 var width = n;
 var height = n;
 var grid = [[false]];
+var startTime = new Date();
 //const columnNames = [ "A", "B", "C", "D", "E", "F", "G", "H" ];
 const period = 2000;
 
@@ -49,6 +50,7 @@ function init() {
     document.getElementById("label1").textContent = "[ status: PAUSED ]";
     console.table(grid); // print on console of web-browser 
     renderGridView(); // render on webpage 
+    startTime = new Date();
 }
 
 function printGridStatusInTextArea() {
@@ -63,7 +65,17 @@ function printGridStatusInTextArea() {
         }
         str += "\n";
     }
-    str += "------------\n";
+    var now = new Date();
+    var delta_t = now - startTime;
+    var rest_part = delta_t % 1000;
+    delta_t = Math.floor(delta_t / 1000);
+    var seconds = delta_t % 60;
+    delta_t = Math.floor(delta_t / 60);
+    var minutes = delta_t % 60;
+    delta_t = Math.floor(delta_t / 60);
+    var hours = delta_t % 24;
+    var days = Math.floor(delta_t / 24);
+    str += "------(" + days.toString() + "." + hours.toString().padStart(2, "0") + ":" + minutes.toString().padStart(2, "0") + ":" + seconds.toString().padStart(2, "0") + "." + rest_part.toString().padEnd(3, "0") + ")------\n";
     document.getElementById("textarea1").value += str;
 }
 

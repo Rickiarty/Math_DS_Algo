@@ -1,0 +1,4 @@
+[package]
+name = "n_queens"
+version = "1.0.0"
+edition = "2018"

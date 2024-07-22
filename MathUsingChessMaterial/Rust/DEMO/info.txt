@@ -2,3 +2,5 @@ Q1 ~ Q15 by:
     CPU: 11th gen. Intel(R) Core(TM) i5-11400H @ 2.70 GHz 2.69 GHz, x64
     memory: 16 GB RAM
     OS: Windows 64-bit
+    rustc 1.79.0 (129f3b996 2024-06-10)
+    cargo 1.79.0 (ffa9cf99a 2024-06-03)
